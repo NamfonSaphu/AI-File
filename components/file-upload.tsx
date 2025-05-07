@@ -18,6 +18,7 @@ import { Progress } from "@/components/ui/progress";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Textarea } from "./ui/textarea";
 import { getAiResult } from "@/server/ai";
+import { ThemeToggle } from "@/app/theme-toggle";
 
 interface FileUploadProps {
   maxFiles?: number;
@@ -159,7 +160,10 @@ export function FileUpload({
 
       {!aiResult && (
         <>
-      <h1 className="text-2xl font-bold mb-6">Upload File</h1>
+          <div className="flex justify-between">
+            <h1 className="text-2xl font-bold mb-6">Upload File</h1>
+            <ThemeToggle />
+          </div>
 
           <Textarea
             placeholder="Enter your prompt here"
