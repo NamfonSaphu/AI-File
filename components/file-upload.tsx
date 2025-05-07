@@ -159,6 +159,8 @@ export function FileUpload({
 
       {!aiResult && (
         <>
+      <h1 className="text-2xl font-bold mb-6">Upload File</h1>
+
           <Textarea
             placeholder="Enter your prompt here"
             rows={10}
